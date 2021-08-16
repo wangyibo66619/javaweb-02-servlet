@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<web-app  xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+          version="4.0"
+          metadata-complete="true">
+<!--配置web应用初始参数-->
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.wang.servlet.HelloServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>getc</servlet-name>
+        <servlet-class>com.wang.servlet.GetServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>getc</servlet-name>
+        <url-pattern>/getc</url-pattern>
+    </servlet-mapping>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <parent>
-    <artifactId>javaweb-02-servlet</artifactId>
-    <groupId>com.wang</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
 
-  <modelVersion>4.0.0</modelVersion>
+    <servlet>
+        <servlet-name>gp</servlet-name>
+        <servlet-class>com.wang.servlet.ServletDemo03</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gp</servlet-name>
+        <url-pattern>/gp</url-pattern>
+    </servlet-mapping>
 
-  <groupId>com.wang</groupId>
-  <artifactId>servlet-02</artifactId>
-  <packaging>war</packaging>
+    <servlet>
+        <servlet-name>sd4</servlet-name>
+        <servlet-class>com.wang.servlet.ServletDemo04</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sd4</servlet-name>
+        <url-pattern>/sd4</url-pattern>
+    </servlet-mapping>
 
-
-</project>
+    <servlet>
+        <servlet-name>sd5</servlet-name>
+        <servlet-class>com.wang.servlet.ServletDemo05</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sd5</servlet-name>
+        <url-pattern>/sd5</url-pattern>
+    </servlet-mapping>
+</web-app>
